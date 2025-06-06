@@ -8,4 +8,5 @@ FastTail is dedicated for fast inference on tail dependence and tail asymmetry u
 - R packages: NeuralEstimators-0.2.0; JuliaConnectoR-1.1.4 
 
 ## Quick examples
-- TBA
+dat <- CopulaOne::rGGEE_COP(700, al=1.4, be=0.8)
+fasttail(dat)

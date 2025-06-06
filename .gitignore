@@ -38,6 +38,8 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+.Rbuildignore
+
 
 # pkgdown site
 docs/
@@ -47,6 +49,3 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
-
-# experimental
-NBE/
