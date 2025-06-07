@@ -3,16 +3,18 @@ JuliaConnectoR::juliaEval('using NeuralEstimators, Flux, CUDA, cuDNN')
 #' Fast inference for bivariate tail dependence and tail asymmetry
 #'
 #' Fast inference for bivariate tail dependence and tail asymmetry. The first run is a bit slower as it needs to load the model, and after the first run the speed will be ultra fast.
-#' @param dat: input of uniform scores, should be n rows and 2 columns
-#' @param model: GGEE or PPPP copulas, default is GGEE copula
-#' @param random: Methods for generating random samples used for training NBE, default is quasi
+#' @param dat input of uniform scores, should be n rows and 2 columns
+#' @param model GGEE or PPPP copulas, default is GGEE copula
+#' @param random Methods for generating random samples used for training NBE, default is quasi
 #' @returns estimated parameters (alpha, beta > 0) of the copula, and the unified tail dependence parameters (0 < utd_lower, utd_upper < 1, the larger the stronger degree of dependence in the tails)
 #' @source Based on Hua, L. (2025), Amortized Neural Inference on Bivariate Tail Dependence and Tail Asymmetry
 #' @keywords tail dependence, intermediate tail dependence, copula
-#' @export
 #' @examples
+#' \dontrun{
 #' dat <- CopulaOne::rGGEE_COP(700, al=1.4, be=0.8)
 #' fasttail(dat)
+#' }
+#' @export
 fasttail <- function(dat, model="GGEE", random="quasi")
 {
   if (ncol(dat) != 2) stop("The data should be n rows and 2 columns!")

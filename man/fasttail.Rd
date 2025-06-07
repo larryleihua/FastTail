@@ -10,11 +10,11 @@ Based on Hua, L. (2025), Amortized Neural Inference on Bivariate Tail Dependence
 fasttail(dat, model = "GGEE", random = "quasi")
 }
 \arguments{
-\item{dat:}{input of uniform scores, should be n rows and 2 columns}
+\item{dat}{input of uniform scores, should be n rows and 2 columns}
 
-\item{model:}{GGEE or PPPP copulas, default is GGEE copula}
+\item{model}{GGEE or PPPP copulas, default is GGEE copula}
 
-\item{random:}{Methods for generating random samples used for training NBE, default is quasi}
+\item{random}{Methods for generating random samples used for training NBE, default is quasi}
 }
 \value{
 estimated parameters (alpha, beta > 0) of the copula, and the unified tail dependence parameters (0 < utd_lower, utd_upper < 1, the larger the stronger degree of dependence in the tails)
@@ -23,8 +23,10 @@ estimated parameters (alpha, beta > 0) of the copula, and the unified tail depen
 Fast inference for bivariate tail dependence and tail asymmetry. The first run is a bit slower as it needs to load the model, and after the first run the speed will be ultra fast.
 }
 \examples{
+\dontrun{
 dat <- CopulaOne::rGGEE_COP(700, al=1.4, be=0.8)
 fasttail(dat)
+}
 }
 \keyword{copula}
 \keyword{dependence,}

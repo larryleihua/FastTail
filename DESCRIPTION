@@ -5,8 +5,8 @@ Authors@R: person("Lei", "Hua", email = "larry.lei.hua@gmail.com", role = c("aut
 Description: Fast inference of various tail dependence and tail asymmetry patterns for bivariate copulas. 
 	It for now covers the GGEE and the PPPP copulas that provide fairly general 
 Depends:
-    R (>= 4.3.3)
-License: MIT
+    R (>= 4.3)
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
