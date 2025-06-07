@@ -1,5 +1,3 @@
-JuliaConnectoR::juliaEval('using NeuralEstimators, Flux, CUDA, cuDNN')
-
 #' Fast inference for bivariate tail dependence and tail asymmetry
 #'
 #' Fast inference for bivariate tail dependence and tail asymmetry. The first run is a bit slower as it needs to load the model, and after the first run the speed will be ultra fast.
@@ -18,6 +16,7 @@ JuliaConnectoR::juliaEval('using NeuralEstimators, Flux, CUDA, cuDNN')
 fasttail <- function(dat, model="GGEE", random="quasi")
 {
   if (ncol(dat) != 2) stop("The data should be n rows and 2 columns!")
+  JuliaConnectoR::juliaEval('using NeuralEstimators, Flux, CUDA, cuDNN')
   n <- nrow(dat)
 
   if(n <= 78)

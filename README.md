@@ -12,7 +12,7 @@ add NeuralEstimators@0.1.2 Flux@0.16.3 CUDA@5.6.1, cuDNN@1.4.1
 ```
 - Install FastTail
 ```r
-devtools::install_github("larryleihua/FastTail")
+devtools::install_github("larryleihua/FastTail", force=T)
 ```
 
 ### The following system was tested
