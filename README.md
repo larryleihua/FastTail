@@ -6,7 +6,7 @@ FastTail is dedicated for fast inference on tail dependence and tail asymmetry u
 ### Install Julia
 - Install Julia from [here](https://julialang.org/install/)
 - Run julia in your terminal
-- Install NeuralEstimators-0.1.2: press ']' to switch to the package manager (Pkg) mode, then 
+- Install packages in Julia: press ']' to switch to the package manager (Pkg) mode, then 
 ```
 add NeuralEstimators@0.1.2 Flux@0.16.3 CUDA@5.6.1, cuDNN@1.4.1
 ```
