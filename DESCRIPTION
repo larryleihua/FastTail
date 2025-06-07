@@ -3,7 +3,7 @@ Title: An R package for Fast Inference on Bivariate Tail Dependence and Tail Asy
 Version: 0.1.0
 Authors@R: person("Lei", "Hua", email = "larry.lei.hua@gmail.com", role = c("aut", "cre"))
 Description: Fast inference of various tail dependence and tail asymmetry patterns for bivariate copulas. 
-	It for now covers the GGEE and the PPPP copulas that provide fairly general 
+	It for now covers the GGEE and the PPPP copulas.
 Depends:
     R (>= 4.3)
 License: GPL-3 + file LICENSE
