@@ -1,7 +1,7 @@
 #' Fast inference for bivariate tail dependence and tail asymmetry
 #'
 #' Fast inference for bivariate tail dependence and tail asymmetry. The first run is a bit slower as it needs to load the model, and after the first run the speed will be ultra fast.
-#' @param dat input of uniform scores, should be n rows and 2 columns
+#' @param dat input of uniform scores, should be n rows and 2 columns; if not uniform scores the data will be converted to uniform scores for further calculation.
 #' @param model GGEE or PPPP copulas, default is GGEE copula
 #' @param random Methods for generating random samples used for training NBE, default is quasi
 #' @returns estimated parameters (alpha, beta > 0) of the copula, and the unified tail dependence parameters (0 < utd_lower, utd_upper < 1, the larger the stronger degree of dependence in the tails)
@@ -16,8 +16,27 @@
 fasttail <- function(dat, model="GGEE", random="quasi")
 {
   if (ncol(dat) != 2) stop("The data should be n rows and 2 columns!")
-  JuliaConnectoR::juliaEval('using NeuralEstimators, Flux, CUDA, cuDNN')
   n <- nrow(dat)
+
+  if(ks.test(dat[,1], "punif", min=0, max=1)$p.value < 0.05 |
+     max(dat[,1]) > 1 | min(dat[,1]) < 0)
+  {
+    uscore <- (1:n - 0.5)/n
+    cat("The 1st column is not uniformly distributed, and is now
+        converted to uniform scores.", "\n")
+    dat[,1] <- uscore[rank(dat[,1])]
+  }
+
+  if(ks.test(dat[,2], "punif", min=0, max=1)$p.value < 0.05 |
+     max(dat[,2]) > 1 | min(dat[,2]) < 0)
+  {
+    uscore <- (1:n - 0.5)/n
+    cat("The 2nd column is not uniformly distributed, and is now
+        converted to uniform scores.", "\n")
+    dat[,2] <- uscore[rank(dat[,2])]
+  }
+
+  JuliaConnectoR::juliaEval('using NeuralEstimators, Flux, CUDA, cuDNN')
 
   if(n <= 78)
   {

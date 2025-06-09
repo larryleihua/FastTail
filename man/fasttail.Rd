@@ -10,7 +10,7 @@ Based on Hua, L. (2025), Amortized Neural Inference on Bivariate Tail Dependence
 fasttail(dat, model = "GGEE", random = "quasi")
 }
 \arguments{
-\item{dat}{input of uniform scores, should be n rows and 2 columns}
+\item{dat}{input of uniform scores, should be n rows and 2 columns; if not uniform scores the data will be converted to uniform scores for further calculation.}
 
 \item{model}{GGEE or PPPP copulas, default is GGEE copula}
 
