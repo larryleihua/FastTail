@@ -29,3 +29,6 @@ fasttail(dat1)
 dat2 <- CopulaOne::rGGEE_COP(700, al=1.4, be=0.8)
 fasttail(dat2)
 ```
+
+## References
+- Hua, L., 2025, Amortized neural inference on bivariate tail dependence and tail asymmetry, [full text](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5287687)
