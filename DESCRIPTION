@@ -1,6 +1,6 @@
 Package: FastTail
 Title: An R package for Fast Inference on Bivariate Tail Dependence and Tail Asymmetry Using Neural Bayes Estimators
-Version: 0.1.0
+Version: 0.1.2
 Authors@R: person("Lei", "Hua", email = "larry.lei.hua@gmail.com", role = c("aut", "cre"))
 Description: Fast inference of various tail dependence and tail asymmetry patterns for bivariate copulas. 
 	It for now covers the GGEE and the PPPP copulas.
