@@ -24,7 +24,7 @@ Fast inference for bivariate tail dependence and tail asymmetry. The first run i
 }
 \examples{
 \dontrun{
-dat <- CopulaOne::rGGEE_COP(700, al=1.4, be=0.8)
+dat <- subset(cobemo, copula=="bb7")[, c("u","v")]
 fasttail(dat)
 }
 }

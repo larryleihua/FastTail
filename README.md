@@ -23,8 +23,7 @@ devtools::install_github("larryleihua/FastTail", force=T)
 ## Quick examples
 ```r
 library(FastTail)
-load(cobemo) # copula benchmark (moderate)
-dat1 <- subset(cobemo, copula=="bb7")
+dat1 <- subset(cobemo, copula=="bb7")[,c("u","v")]
 fasttail(dat1)
 
 dat2 <- CopulaOne::rGGEE_COP(700, al=1.4, be=0.8)

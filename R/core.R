@@ -1,6 +1,7 @@
 #' Fast inference for bivariate tail dependence and tail asymmetry
 #'
 #' Fast inference for bivariate tail dependence and tail asymmetry. The first run is a bit slower as it needs to load the model, and after the first run the speed will be ultra fast.
+#' @importFrom stats ks.test
 #' @param dat input of uniform scores, should be n rows and 2 columns; if not uniform scores the data will be converted to uniform scores for further calculation.
 #' @param model GGEE or PPPP copulas, default is GGEE copula
 #' @param random Methods for generating random samples used for training NBE, default is quasi
@@ -9,7 +10,7 @@
 #' @keywords tail dependence, intermediate tail dependence, copula
 #' @examples
 #' \dontrun{
-#' dat <- CopulaOne::rGGEE_COP(700, al=1.4, be=0.8)
+#' dat <- subset(cobemo, copula=="bb7")[, c("u","v")]
 #' fasttail(dat)
 #' }
 #' @export
