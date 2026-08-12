@@ -31,4 +31,4 @@ fasttail(dat2)
 ```
 
 ## References
-- Hua, L., 2025, Amortized neural inference on bivariate tail dependence and tail asymmetry, [full text](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5287687)
+- Hua, L., 2026, Amortized neural inference on bivariate tail dependence and tail asymmetry, [full text](https://www.degruyterbrill.com/document/doi/10.1515/demo-2025-0021/html)
