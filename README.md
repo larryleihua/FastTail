@@ -43,12 +43,6 @@ copula scale.
 
 Sample sizes above 780 fall back to the m = 780 estimator, which is not ideal.
 
-## Regenerating the bundled estimators
-
-Only needed if the NBEs are retrained — see [`data-raw/`](data-raw/). The
-original Julia checkpoints are kept there for provenance and are excluded from
-the built package.
-
 ## References
 
 - Hua, L. (2026), *Amortized neural inference on bivariate tail dependence and

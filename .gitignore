@@ -4,5 +4,4 @@
 .Ruserdata
 *.tar.gz
 FastTail.Rcheck/
-data-raw/weights.bin
-data-raw/weights_index.csv
+data-raw/
