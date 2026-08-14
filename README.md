@@ -29,7 +29,8 @@ fasttail(dat2)
 
 `fasttail()` returns the estimated copula parameters (`alpha`, `beta` > 0) and
 the unified tail dependence parameters (`lower`, `upper`, both in (0, 1); larger
-means stronger dependence in that tail).
+means stronger dependence in that tail). Bootstrap the input data to assess the
+uncertainty of the estimators.
 
 Arguments: `model` is `"GGEE"` (default) or `"PPPP"`; `random` is `"quasi"`
 (default) or `"pseudo"`. The NBE trained at the nearest replicate count

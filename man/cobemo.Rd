@@ -13,7 +13,7 @@ A data frame with 9360 rows and 3 variables:
 }
 }
 \source{
-Simulated and used in the paper: Hua, L. (2025), Amortized Neural Inference on Bivariate Tail Dependence and Tail Asymmetry
+Simulated and used in the paper: Hua, L. (2026), Amortized Neural Inference on Bivariate Tail Dependence and Tail Asymmetry
 }
 \usage{
 cobemo

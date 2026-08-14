@@ -25,6 +25,6 @@ dat <- subset(cobemo, copula == "bb7")[, c("u", "v")]
 fasttail(dat)
 }
 \source{
-Hua, L. (2025), Amortized Neural Inference on Bivariate Tail Dependence and
+Hua, L. (2026), Amortized Neural Inference on Bivariate Tail Dependence and
 Tail Asymmetry.
 }
