@@ -13,13 +13,6 @@ base R** — no Julia, no Flux, no GPU, no compilation.
 remotes::install_github("larryleihua/FastTail")
 ```
 
-Or download `FastTail_0.2.0.tar.gz` from the
-[Releases](https://github.com/larryleihua/FastTail/releases) page and:
-
-```r
-install.packages("FastTail_0.2.0.tar.gz", repos = NULL, type = "source")
-```
-
 Requires R >= 4.0. There are no package dependencies.
 
 ## Quick examples
